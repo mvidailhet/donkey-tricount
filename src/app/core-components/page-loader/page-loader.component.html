@@ -1,0 +1,12 @@
+<div class="screen-centerer" *ngIf="isLoading">
+  <div *ngIf="showOverlay" class="overlay"></div>
+  <ion-spinner
+    *ngIf="isLoading"
+    [color]="color"
+    size="large"
+    class="main-loader"
+    name="crescent"
+    color="primary"
+  ></ion-spinner>
+  <ion-text *ngIf="message" [color]="color" class="ion-margin-top">{{ message }}</ion-text>
+</div>
