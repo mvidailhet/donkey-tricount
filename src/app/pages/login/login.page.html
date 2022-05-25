@@ -11,7 +11,7 @@
           <h2>Sélectionner un utilisateur</h2>
 
           <ion-list>
-            <ion-item *ngFor="let user of users" button (click)="login()">
+            <ion-item *ngFor="let user of users" button (click)="login(user)">
               <ion-avatar slot="start">
                 <img [src]="'/assets/avatars/' + user.avatar + '.svg'">
               </ion-avatar>
@@ -22,8 +22,6 @@
           </ion-list>
         </div>
       </div>
-
-      <app-page-loader [isLoading]="isLoading"></app-page-loader>
     </ion-col>
   </ion-row>
 </ion-content>
